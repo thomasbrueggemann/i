@@ -1,4 +1,4 @@
-# i
+# Me
 Digital multi-dimensional data representation of myself.
 
 ## Intro
