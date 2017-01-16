@@ -1,4 +1,4 @@
-# 👤 Ich
+# 🙂 Ich
 Digital multi-dimensional data representation of myself.
 
 ## Intro
