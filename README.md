@@ -1,4 +1,4 @@
-# 🙂 Ich
+# 🙂 Die Ich-Maschine
 Digital multi-dimensional data representation of myself.
 
 ## Intro
@@ -12,6 +12,7 @@ At any point in **time** I am (in the foreseeable future) **somewhere** on earth
 	  "type": "Point",
 	  "coordinates": [ -73.97, 40.77 ]
   },
+  "ctx": "Context",
   "data: {
 	  // ...
   }
