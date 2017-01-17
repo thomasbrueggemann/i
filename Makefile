@@ -7,8 +7,8 @@ TARGET := bin/ich
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
-CFLAGS := -g -Wall -std=c++14
-LIB := $(pkg-config --cflags --libs libmongocxx) -pthread -lboost_thread -lboost_filesystem -lboost_system
+CFLAGS := -g -Wall -std=c++14 $(pkg-config --cflags libmongocxx)
+LIB := $(pkg-config --libs libmongocxx) -pthread -lboost_thread -lboost_filesystem -lboost_system
 INC := -I include
 
 $(TARGET): $(OBJECTS)
