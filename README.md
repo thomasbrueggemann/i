@@ -1,4 +1,4 @@
-# 🙂 Ich
+# 🙂 Die Ich-Maschine
 Digital multi-dimensional data representation of myself.
 
 ## Intro
