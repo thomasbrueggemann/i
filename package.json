@@ -1,0 +1,22 @@
+{
+  "name": "ich",
+  "version": "1.0.0",
+  "description": "Digital multi-dimensional contextual data representation of myself.",
+  "main": "ich.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasbrueggemann/ich.git"
+  },
+  "author": "Thomas Brüggemann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomasbrueggemann/ich/issues"
+  },
+  "homepage": "https://github.com/thomasbrueggemann/ich#readme",
+  "dependencies": {
+    "restify": "^4.3.0"
+  }
+}
