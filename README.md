@@ -17,3 +17,11 @@ At any point in **time** I am (in the foreseeable future) **somewhere** on earth
   }
 }
 ```
+
+## Ideas
+
+### Things to track
+
+- Browsing history
+- Car positions (with OBD2 data, etc...)
+- Geolocated posts on facebook, Twitter, Instagram, etc...
