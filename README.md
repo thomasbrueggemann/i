@@ -23,7 +23,6 @@ At any point in **time** I am (in the foreseeable future) **somewhere** on earth
 
 ### Things to track
 
-- Browsing history
+- ~Browsing history~
 - Car positions (with OBD2 data, etc...)
-- Geolocated posts on Facebook, Twitter, Instagram, etc...
 - Fitness-Tracker stuff
