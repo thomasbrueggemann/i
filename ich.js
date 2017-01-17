@@ -10,9 +10,15 @@ server.use(restify.bodyParser());
 // ROUTES
 server.post("/", function create(req, res, next) {
 
+	// prepare time data
+	var data = req.body.map(function(item) {
+
+		item["time"] = new Date(item["time"]);
+		return item;
+	});
+
 	// insert data into mongodb
-	console.log(req.body);
-	global.spacetime.insertMany(req.body);
+	global.spacetime.insertMany(data);
 
 	res.setHeader("Access-Control-Allow-Origin", "*");
 	res.send(200, {
