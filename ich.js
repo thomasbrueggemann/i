@@ -14,6 +14,7 @@ server.post("/", function create(req, res, next) {
 	console.log(req.body);
 	global.spacetime.insertMany(req.body);
 
+	res.setHeader("Access-Control-Allow-Origin", "*");
 	res.send(200, {
 		"ack": true,
 		"err": null
