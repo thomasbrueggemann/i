@@ -1,0 +1,20 @@
+version: "2"
+services:
+
+  # ICH
+  ich:
+    restart: always
+    image: ich
+    ports:
+      - "18080:18080"
+    links:
+        - mongodb
+
+  # MONGODB
+  mongodb:
+    restart: always
+    image: mongo:3.4.1
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db:/data/db
