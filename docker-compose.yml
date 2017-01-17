@@ -15,7 +15,6 @@ services:
     restart: always
     image: mongo:3.4.1
     ports:
-      - "27017:27017"
+      - "27027:27017"
     volumes:
-      - ./data/db:/data/db
-    privileged: true
+      - ./data/db:/data/db 

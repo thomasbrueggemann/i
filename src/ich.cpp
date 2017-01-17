@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 
 	// connect to mongodb
     mongocxx::instance inst{};
-    mongocxx::client mongo{mongocxx::uri{"mongodb://mongodb:27017"}};
+    mongocxx::client mongo{mongocxx::uri{"mongodb://127.0.0.1:27017"}};
 
 	// ROUTES
     CROW_ROUTE(app, "/")(
