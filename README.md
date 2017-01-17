@@ -1,5 +1,5 @@
 # 🙂 Die Ich-Maschine
-Digital multi-dimensional data representation of myself.
+Digital multi-dimensional contextual data representation of myself.
 
 ## Intro
 
