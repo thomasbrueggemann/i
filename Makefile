@@ -1,4 +1,4 @@
-CC := g++ # This is the main compiler
+CC := g++-5 # This is the main compiler
 
 SRCDIR := src
 BUILDDIR := bin
