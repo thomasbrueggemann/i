@@ -7,6 +7,7 @@ server.use(restify.bodyParser());
 
 // POST /
 server.post("/", function create(req, res, next) {
+
     // prepare time data
     var data = req.body.map(function(item) {
         item["time"] = new Date(item["time"]);
@@ -23,13 +24,17 @@ server.post("/", function create(req, res, next) {
 
 // GET /
 server.get("/", function(req, res, next) {
+
     // find latest entry and return it
     global.spacetime.findOne({}, { sort: { time: -1 } }, function(err, data) {
+
         // handle error
         if (err) {
             res.send(500, err);
         }
-        // return data else {
+		
+		// return data
+		else {
             res.send(200, data);
         }
 
