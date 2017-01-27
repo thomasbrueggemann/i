@@ -57,7 +57,7 @@ server.get("/:from/:till", function(req, res, next) {
 		"sort": {
 			"time": -1
 		}
-	}, function(err, data) {
+	}).toArray(function(err, data) {
 
         // handle error
         if (err) {
