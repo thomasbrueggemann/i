@@ -44,8 +44,11 @@ server.get("/", function(req, res, next) {
 });
 
 server.get("/:from/:till", function(req, res, next) {
-	var from = moment(req.params.from);
-	var till = moment(req.params.till);
+
+	console.log(req.params.from, req.params.till);
+
+	var from = moment(parseFloat(req.params.from));
+	var till = moment(parseFloat(req.params.till));
 
 	// find latest entry and return it
     global.spacetime.find({
