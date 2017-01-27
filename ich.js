@@ -1,7 +1,6 @@
 var restify = require("restify");
 var MongoClient = require("mongodb").MongoClient;
 var moment = require("moment");
-var geojson = require("./geojson");
 
 // create server
 var server = restify.createServer({ name: "Ich" });
