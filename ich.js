@@ -1,5 +1,7 @@
 var restify = require("restify");
 var MongoClient = require("mongodb").MongoClient;
+var moment = require("moment");
+var geojson = require("./geojson");
 
 // create server
 var server = restify.createServer({ name: "Ich" });
@@ -26,16 +28,58 @@ server.post("/", function create(req, res, next) {
 server.get("/", function(req, res, next) {
 
     // find latest entry and return it
-    global.spacetime.findOne({}, { sort: { time: -1 } }, function(err, data) {
+    global.spacetime.findOne({}, { "sort": { "time": -1 } }, function(err, data) {
 
         // handle error
         if (err) {
             res.send(500, err);
         }
-		
+
 		// return data
 		else {
             res.send(200, data);
+        }
+
+        return next();
+    });
+});
+
+server.get("/:from/:till", function(req, res, next) {
+	var from = moment(req.params.from);
+	var till = moment(req.params.till);
+
+	// find latest entry and return it
+    global.spacetime.find({
+		"time" : {
+		    "$gte" : from.toDate(),
+		    "$lt" : till.toDate()
+		}
+	}, {
+		"sort": {
+			"time": -1
+		}
+	}, function(err, data) {
+
+        // handle error
+        if (err) {
+            res.send(500, err);
+        }
+
+		// return data
+		else {
+
+			var features = data.map(function(item) {
+				return {
+					"type": "Feature",
+					"properties": {},
+					"geometry": item.loc
+			    };
+			});
+
+            res.send(200, {
+				"type": "FeatureCollection",
+				"features": features
+			});
         }
 
         return next();
