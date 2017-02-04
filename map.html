@@ -25,7 +25,10 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2FpbGluZ2NoYW5uZWxzIiwiYSI6ImNpbHp5MngxczAwa
 
 	map.on('load', function () {
 
-	    map.addSource('ich', { type: 'geojson', data: "https://ich.thomasbrueggemann.com/1451606400000/1485477504000" });
+	    map.addSource('ich', { 
+		    type: 'geojson', 
+		    data: "https://ich.thomasbrueggemann.com/1451606400000/" + new Date().getTime() 
+	    });
 	    map.addLayer({
 	        "id": "ich",
 	        "type": "symbol",
